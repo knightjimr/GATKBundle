@@ -1,2 +1,4 @@
 # Support Files for GATK Pipelines
 This repository contains the support files used by the GATK 4 best practices pipelines, not found in other repositories.
+   * gatkLowQualityFilter.py - A python script that is used to improve the GATK 4.1.2.0 variant filtering by failing clear false positive variants passed by the GATK software (particularly Variant Quality Score Recalibration)
+   * hg38_coding_idt_med_v2_padded_regions.bed - A bed file used for variant calling, which merges padded versions of the RefGene coding regions (padded 40 bp) and the target regions for the Nimblegen xGen Exome v2 kit, Nimblegen MedExome kit and the IDT Exome V1 and V2 kits (all padded 150 bp).  This ensures the variant calling will include the calls for any of those kits' regions, as well as any related coding regions that might be captured by those kits (but are uniquely mappable with full Illumina paired-end reads).
